@@ -11,3 +11,11 @@
   - name: add php support
     apt:
       name: libapache2-mod-php
+  
+  - name: copy default html
+    copy:
+      src: default_site.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
