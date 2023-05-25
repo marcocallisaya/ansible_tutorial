@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Install apache2 package
+    apt:
+      name: apache2
+
+  - name: add php support
+    apt:
+      name: libapache2-mod-php
